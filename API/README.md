@@ -39,4 +39,4 @@ Note: Make sure you're in the appropriate folder
 
 1. You can import with our file: `All endpoint.postman_collection.json`
 
-2. This is the link: `https://www.postman.com/winter-shuttle-514865/workspace/yantech`
+2. This is the link: `https://www.postman.com/winter-shuttle-514865/workspace/yatech`
