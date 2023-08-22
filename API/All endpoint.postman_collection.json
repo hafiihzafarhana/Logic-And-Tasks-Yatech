@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "90174ec5-1fb5-4991-a006-c40b11d23967",
+		"name": "All endpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17886303",
+		"_collection_link": "https://www.postman.com/winter-shuttle-514865/workspace/yantech/collection/17886303-90174ec5-1fb5-4991-a006-c40b11d23967?action=share&source=collection_link&creator=17886303"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"hafiihza83@gmail.com\",\r\n    \"full_name\":\"Hafi\",\r\n    \"password\":\"hafiihza83\",\r\n    \"user_name\":\"hafiihza\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/sign-up",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"hafiihza83@gmail.com\",\r\n    \"password\":\"hafiihza83\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/sign-in",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refreshing Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZTI3YzdiMzktOTMzMC00MTgwLTkxN2MtMmRkOWQ3OTI1ZDUxIiwicm9sZV9pZCI6IjVlMDNlZjZlLWVmZGEtNGNjMi04NDFmLWVmYWNjZGIxMDYzNyIsInNlc3Npb25faWQiOiIzZjMzZjljYy1jNTdhLTQ3YjItYmJlYi1hZDg5ZmI1MWE0M2MiLCJpYXQiOjE2OTI3MTExNjQsImV4cCI6MTY5MjcxMjA2NH0.cqoJAyazJGhAmkQMszgPzv56KekULzuue81PXXtJwKY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/auth/refreshing-access-token",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"refreshing-access-token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": []
+		},
+		{
+			"name": "Get me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZTI3YzdiMzktOTMzMC00MTgwLTkxN2MtMmRkOWQ3OTI1ZDUxIiwicm9sZV9pZCI6IjVlMDNlZjZlLWVmZGEtNGNjMi04NDFmLWVmYWNjZGIxMDYzNyIsInNlc3Npb25faWQiOiIzZjMzZjljYy1jNTdhLTQ3YjItYmJlYi1hZDg5ZmI1MWE0M2MiLCJpYXQiOjE2OTI3MTExNzcsImV4cCI6MTY5MjcxMjA3N30.Mtk6H_dpn7B0nQ19PjQUJypiaGPzxdC27NVJLKEbb9g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/users/me",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
